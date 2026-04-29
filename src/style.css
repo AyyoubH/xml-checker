@@ -1,0 +1,148 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, sans-serif;
+  background: #f5f7fa;
+  color: #1a1a2e;
+  min-height: 100vh;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 2rem 1rem;
+}
+
+main {
+  width: 100%;
+  max-width: 600px;
+}
+
+h1 {
+  font-size: 2rem;
+  margin: 0 0 0.25rem;
+  color: #1a73e8;
+}
+
+.subtitle {
+  margin: 0 0 2rem;
+  color: #555;
+}
+
+.card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+
+.field {
+  margin-bottom: 1.5rem;
+}
+
+label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+}
+
+.optional {
+  font-weight: 400;
+  color: #888;
+  font-size: 0.85em;
+}
+
+.required {
+  color: #d93025;
+}
+
+input[type="file"] {
+  display: block;
+  width: 100%;
+  padding: 0.5rem;
+  border: 2px dashed #c5cae9;
+  border-radius: 8px;
+  cursor: pointer;
+  background: #f8f9ff;
+  transition: border-color 0.2s;
+}
+
+input[type="file"]:hover {
+  border-color: #1a73e8;
+}
+
+.hint {
+  margin: 0.4rem 0 0;
+  font-size: 0.82rem;
+  color: #777;
+}
+
+code {
+  background: #eef;
+  padding: 0 3px;
+  border-radius: 3px;
+}
+
+button#validate-btn {
+  width: 100%;
+  padding: 0.8rem;
+  font-size: 1rem;
+  font-weight: 600;
+  background: #1a73e8;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+button#validate-btn:hover {
+  background: #1558b0;
+}
+
+button#validate-btn:active {
+  background: #0e47a1;
+}
+
+.result {
+  margin-top: 1.5rem;
+}
+
+.status {
+  font-size: 1rem;
+  font-weight: 600;
+  min-height: 1.5rem;
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+}
+
+.status.idle {
+  background: transparent;
+}
+
+.status.loading {
+  background: #fff8e1;
+  color: #f57f17;
+}
+
+.status.success {
+  background: #e8f5e9;
+  color: #2e7d32;
+}
+
+.status.error {
+  background: #fce4ec;
+  color: #c62828;
+}
+
+.error-list {
+  margin: 0.75rem 0 0;
+  padding: 0 0 0 1.25rem;
+  color: #b71c1c;
+  font-size: 0.9rem;
+}
+
+.error-list li {
+  margin-bottom: 0.3rem;
+}

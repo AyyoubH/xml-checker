@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>XML Check — Validate XML against XSD</title>
+  <link rel="stylesheet" href="/src/style.css" />
+</head>
+<body>
+  <main>
+    <h1>XML Check</h1>
+    <p class="subtitle">Validate XML files against XSD schemas — entirely in your browser.</p>
+
+    <section class="card">
+      <div class="field">
+        <label for="xsd-files">XSD Schema(s) <span class="optional">(optional)</span></label>
+        <input type="file" id="xsd-files" accept=".xsd,text/xml,application/xml" multiple />
+        <p class="hint">Select one or more <code>.xsd</code> files to validate against.</p>
+      </div>
+
+      <div class="field">
+        <label for="xml-file">XML File <span class="required">*</span></label>
+        <input type="file" id="xml-file" accept=".xml,text/xml,application/xml" />
+        <p class="hint">Select the <code>.xml</code> file to validate.</p>
+      </div>
+
+      <button id="validate-btn" type="button">Validate</button>
+    </section>
+
+    <section class="result" id="result-section">
+      <p id="status" class="status idle"></p>
+      <ul id="errors" class="error-list"></ul>
+    </section>
+  </main>
+  <script type="module" src="/src/index.ts"></script>
+</body>
+</html>
